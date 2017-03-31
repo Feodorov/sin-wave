@@ -1,18 +1,10 @@
-(ns sin-vawe.core
-  (:require [om.core :as om :include-macros true]
-            [om.dom :as dom :include-macros true]))
+(ns sin-vawe.core)
 
-(enable-console-print!)
+(def main [])
 
-(defonce app-state (atom {:text "Hello Chestnut!"}))
+(def canvas (.getElementById js/document "myCanvas"))
+(def ctx (.getContext canvas "2d"))
 
-(defn root-component [app owner]
-  (reify
-    om/IRender
-    (render [_]
-      (dom/div nil (dom/h1 nil (:text app))))))
+(.clearRect ctx  0 0 (.-width canvas) (.-height canvas))
 
-(om/root
- root-component
- app-state
- {:target (js/document.getElementById "app")})
+(.log js/console ctx)
