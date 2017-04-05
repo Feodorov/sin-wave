@@ -1,4 +1,4 @@
-(ns sin-vawe.example-test
+(ns sin-wav`e.example-test
   (:require [clojure.test :refer :all]))
 
 (deftest example-passing-test

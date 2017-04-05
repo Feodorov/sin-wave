@@ -1,4 +1,4 @@
-(defproject sin-vawe "0.1.0-SNAPSHOT"
+(defproject sin_wave "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
   :url "http://example.com/FIXME"
   :license {:name "Eclipse Public License"
@@ -26,10 +26,10 @@
 
   :clean-targets ^{:protect false} [:target-path :compile-path "resources/public/js"]
 
-  :uberjar-name "sin-vawe.jar"
+  :uberjar-name "sin_wave.jar"
 
   ;; Use `lein run` if you just want to start a HTTP server, without figwheel
-  :main sin-vawe.server
+  :main sin_wave.server
 
   ;; nREPL by default starts in the :main namespace, we want to start in `user`
   ;; because that's where our development helper functions like (run) and
@@ -42,25 +42,25 @@
 
                 :figwheel true
                 ;; Alternatively, you can configure a function to run every time figwheel reloads.
-                ;; :figwheel {:on-jsload "sin-vawe.core/on-figwheel-reload"}
+                ;; :figwheel {:on-jsload "sin_wave.core/on-figwheel-reload"}
 
-                :compiler {:main sin-vawe.core
+                :compiler {:main sin_wave.core
                            :asset-path "js/compiled/out"
-                           :output-to "resources/public/js/compiled/sin_vawe.js"
+                           :output-to "resources/public/js/compiled/sin_wave.js"
                            :output-dir "resources/public/js/compiled/out"
                            :source-map-timestamp true}}
 
                {:id "test"
                 :source-paths ["src/cljs" "test/cljs" "src/cljc" "test/cljc"]
                 :compiler {:output-to "resources/public/js/compiled/testable.js"
-                           :main sin-vawe.test-runner
+                           :main sin_wave.test-runner
                            :optimizations :none}}
 
                {:id "min"
                 :source-paths ["src/cljs" "src/cljc"]
                 :jar true
-                :compiler {:main sin-vawe.core
-                           :output-to "resources/public/js/compiled/sin_vawe.js"
+                :compiler {:main sin_wave.core
+                           :output-to "resources/public/js/compiled/sin_wave.js"
                            :output-dir "target"
                            :source-map-timestamp true
                            :optimizations :advanced

@@ -1,1 +1,1 @@
-web: java $JVM_OPTS -cp target/sin-vawe.jar clojure.main -m sin-vawe.server
+web: java $JVM_OPTS -cp target/sin-wave.jar clojure.main -m sin-wave.server

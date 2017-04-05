@@ -1,5 +1,5 @@
 (ns user
-  (:require [sin-vawe.server]
+  (:require [sin-wave.server]
             [ring.middleware.reload :refer [wrap-reload]]
             [figwheel-sidecar.repl-api :as figwheel]))
 
@@ -9,7 +9,7 @@
 (set! *warn-on-reflection* true)
 (set! *unchecked-math* :warn-on-boxed)
 (def http-handler
-  (wrap-reload #'sin-vawe.server/http-handler))
+  (wrap-reload #'sin-wave.server/http-handler))
 
 (defn run []
   (figwheel/start-figwheel!))
